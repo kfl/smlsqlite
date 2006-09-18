@@ -7,7 +7,7 @@ structure Sqlite :> SQLITE = struct
 
     open Dynlib
     local 
-        val path = "./msqlite.so"
+        val path = "smlsqlite.so"
         val hdl  = dlopen {lib = path, flag = RTLD_LAZY, global = false}
     in
         val symb = dlsym hdl
