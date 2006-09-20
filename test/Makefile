@@ -21,7 +21,7 @@ all: test
 # Dependencies
 foldttest.ui foldttest.uo: $(SRC)/utildb.ui foldttest.sml
 
-# Link
+# Linking
 foldttest: $(MOSMLSQLITE) foldttest.uo
 	$(MOSMLBIN)/mosmlc -o $@ $^
 
