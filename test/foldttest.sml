@@ -21,6 +21,7 @@ fun writeTable tablename =
              , "CREATE TABLE "^tablename^" (id INT PRIMARY KEY, parent INT);"
              , "INSERT INTO "^tablename^" VALUES( 1, 10 );"
              , "INSERT INTO "^tablename^" VALUES( 2, 20 );"
+             , "INSERT INTO "^tablename^" VALUES( 3, 30 );"
              , "INSERT INTO "^tablename^" VALUES( 42, NULL );"
              , "INSERT INTO "^tablename^" VALUES( 23, NULL );"
              ])
@@ -39,6 +40,7 @@ fun readTable tablename =
 val test = ( writeTable "test"
            ; if readTable "test" =  [ ("42", NONE )
                                     , ("23", NONE )
+                                    , ("3",  SOME 30 )
                                     , ("2",  SOME 20 )
                                     , ("1",  SOME 10 )
                                     ]
