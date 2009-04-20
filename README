@@ -1,0 +1,14 @@
+!!! WARNING !!!
+
+THE CURRENT GITHUB REPOSITORY IS CURRENTLY JUST FOR TESTING AND MIGHT
+BE DELETED WITHOUT WARNING.
+
+!!! WARNING !!!
+
+
+Standard ML binding for SQLite.
+
+smlsqlite is a binding of SQLite to Moscow ML and MLton. This means
+that the SQLite functionality is available to SML. The binding exposes
+the C API rather directly, but a utility interface recasts in a more
+functional way.
